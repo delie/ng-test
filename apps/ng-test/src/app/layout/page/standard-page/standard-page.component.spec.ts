@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgTestLibComponent } from './ng-test-lib.component';
+import { StandardPageComponent } from './standard-page.component';
 
-describe('NgTestLibComponent', () => {
-  let component: NgTestLibComponent;
-  let fixture: ComponentFixture<NgTestLibComponent>;
+describe('StandardPageComponent', () => {
+  let component: StandardPageComponent;
+  let fixture: ComponentFixture<StandardPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgTestLibComponent ]
+      declarations: [ StandardPageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgTestLibComponent);
+    fixture = TestBed.createComponent(StandardPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

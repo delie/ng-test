@@ -50,7 +50,18 @@
     "template-no-negated-async": true,
     "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true,
-
+    "typedef": [
+      true,
+      //  "call-signature",
+      // "arrow-call-signature",
+      "parameter",
+      //"arrow-parameter",
+      "property-declaration",
+      "variable-declaration",
+      "member-variable-declaration",
+      "object-destructuring",
+      "array-destructuring"
+    ],
     "rxjs-finnish": {
       "options": [
         {

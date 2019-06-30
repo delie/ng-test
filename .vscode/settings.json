@@ -1,4 +1,7 @@
 {
   "editor.formatOnSave": true,
-  "editor.rulers": [140]
+  "editor.rulers": [140],
+  "files.associations": {
+    "*.json": "jsonc" // json with comments!  Handy for toggling tslint rules on/off, for instance :)
+  }
 }

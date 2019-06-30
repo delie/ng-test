@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class TestLibService {
   constructor() {}
 
-  test() {
-    console.log('TestLibService! 123456789 000');
+  test(): void {
+    console.log('TestLibService! 1001');
   }
 }
