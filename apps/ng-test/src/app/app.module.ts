@@ -18,8 +18,6 @@ import { appRoutes } from './app.routes';
     HttpClientModule,
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    StoreModule.forRoot(reducers, { metaReducers }),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -27,7 +25,9 @@ import { appRoutes } from './app.routes';
         deps: [HttpClient]
       }
     }),
-    LayoutModule
+    LayoutModule,
+    StoreModule.forRoot(reducers, { metaReducers }),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

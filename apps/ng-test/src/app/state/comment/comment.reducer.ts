@@ -1,19 +1,14 @@
-import { Action, createReducer, on } from '@ngrx/store';
+import { Action, ActionReducer, createReducer } from '@ngrx/store';
+import { Comment } from '../../models/Comment.interface';
 
-
-export interface State {
-
+export interface CommentState {
+  list: Comment[];
 }
 
-export const initialState: State = {
-
+export const initialCommentState: CommentState = {
+  list: []
 };
 
-const commentReducer = createReducer(
-  initialState,
+const reducer: ActionReducer<CommentState, Action> = createReducer(initialCommentState);
 
-);
-
-export function reducer(state: State | undefined, action: Action) {
-  return commentReducer(state, action);
-}
+export const commentReducer: any = (state: CommentState, action: Action) => reducer(state, action);
