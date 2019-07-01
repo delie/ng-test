@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
+import { TranslateModule } from '@ngx-translate/core';
+import { SharedModule } from '../../shared/shared.module';
+import { LayoutModule } from '../../layout/layout.module';
+import { RouterModule } from '@angular/router';
+import { APP_BASE_HREF } from '@angular/common';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -8,9 +13,10 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
-    })
-    .compileComponents();
+      declarations: [HomeComponent],
+      imports: [TranslateModule.forRoot(), LayoutModule, RouterModule.forRoot([])],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

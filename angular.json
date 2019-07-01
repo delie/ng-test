@@ -73,12 +73,11 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular-builders/jest:run",
           "options": {
             "main": "src/test.ts",
             "polyfills": "./apps/ng-test/src/polyfills.ts",
             "tsConfig": "./apps/ng-test/tsconfig.spec.json",
-            "karmaConfig": "./apps/ng-test/karma.conf.js",
             "assets": ["./apps/ng-test/src/favicon.ico", "./apps/ng-test/src/assets"],
             "styles": ["./apps/ng-test/src/styles.scss"],
             "scripts": []
@@ -132,11 +131,10 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular-builders/jest:run",
           "options": {
             "main": "libs/test-lib/src/test.ts",
-            "tsConfig": "libs/test-lib/tsconfig.spec.json",
-            "karmaConfig": "libs/test-lib/karma.conf.js"
+            "tsConfig": "libs/test-lib/tsconfig.spec.json"
           }
         },
         "lint": {
