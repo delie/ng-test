@@ -1,38 +1,38 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "libs",
+  "newProjectRoot": "projects",
   "projects": {
-    "ng-test": {
+    "webapp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "apps/ng-test",
-      "sourceRoot": "./apps/ng-test/src",
+      "root": "projects/webapp",
+      "sourceRoot": "./projects/webapp/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ng-test",
-            "index": "./apps/ng-test/src/index.html",
-            "main": "./apps/ng-test/src/main.ts",
-            "polyfills": "./apps/ng-test/src/polyfills.ts",
-            "tsConfig": "./apps/ng-test/tsconfig.app.json",
+            "outputPath": "dist/webapp",
+            "index": "./projects/webapp/src/index.html",
+            "main": "./projects/webapp/src/main.ts",
+            "polyfills": "./projects/webapp/src/polyfills.ts",
+            "tsConfig": "./projects/webapp/tsconfig.app.json",
             "aot": false,
-            "assets": ["./apps/ng-test/src/favicon.ico", "./apps/ng-test/src/assets"],
-            "styles": ["./apps/ng-test/src/styles.scss"],
+            "assets": ["./projects/webapp/src/favicon.ico", "./projects/webapp/src/assets"],
+            "styles": ["./projects/webapp/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "./apps/ng-test/src/environments/environment.ts",
-                  "with": "./apps/ng-test/src/environments/environment.prod.ts"
+                  "replace": "./projects/webapp/src/environments/environment.ts",
+                  "with": "./projects/webapp/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -57,29 +57,29 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ng-test:build",
-            "port": 4300
+            "browserTarget": "webapp:build",
+            "port": 4200
           },
           "configurations": {
             "production": {
-              "browserTarget": "ng-test:build:production"
+              "browserTarget": "webapp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ng-test:build"
+            "browserTarget": "webapp:build"
           }
         },
         "test": {
           "builder": "@angular-builders/jest:run",
           "options": {
             "main": "src/test.ts",
-            "polyfills": "./apps/ng-test/src/polyfills.ts",
-            "tsConfig": "./apps/ng-test/tsconfig.spec.json",
-            "assets": ["./apps/ng-test/src/favicon.ico", "./apps/ng-test/src/assets"],
-            "styles": ["./apps/ng-test/src/styles.scss"],
+            "polyfills": "./projects/webapp/src/polyfills.ts",
+            "tsConfig": "./projects/webapp/tsconfig.spec.json",
+            "assets": ["./projects/webapp/src/favicon.ico", "./projects/webapp/src/assets"],
+            "styles": ["./projects/webapp/src/styles.scss"],
             "scripts": []
           }
         },
@@ -92,62 +92,62 @@
         }
       }
     },
-    "ng-test-e2e": {
+    "webapp-e2e": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "apps/ng-test-e2e",
-      "sourceRoot": "apps/ng-test-e2e/src",
+      "root": "projects/webapp-e2e",
+      "sourceRoot": "projects/webapp-e2e/src",
       "prefix": "app",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ng-test:serve"
+            "devServerTarget": "webapp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ng-test:serve:production"
+              "devServerTarget": "webapp:serve:production"
             }
           }
         }
       }
     },
-    "test-lib": {
+    "common": {
       "projectType": "library",
-      "root": "libs/test-lib",
-      "sourceRoot": "libs/test-lib/src",
+      "root": "projects/common",
+      "sourceRoot": "projects/common/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "libs/test-lib/tsconfig.lib.json",
-            "project": "libs/test-lib/ng-package.json"
+            "tsConfig": "projects/common/tsconfig.lib.json",
+            "project": "projects/common/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-builders/jest:run",
           "options": {
-            "main": "libs/test-lib/src/test.ts",
-            "tsConfig": "libs/test-lib/tsconfig.spec.json"
+            "main": "projects/common/src/test.ts",
+            "tsConfig": "projects/common/tsconfig.spec.json"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["libs/test-lib/tsconfig.lib.json", "libs/test-lib/tsconfig.spec.json"],
+            "tsConfig": ["projects/common/tsconfig.lib.json", "projects/common/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
       }
     }
   },
-  "defaultProject": "ng-test",
+  "defaultProject": "webapp",
   "cli": {
     "defaultCollection": "@ngrx/schematics"
   }

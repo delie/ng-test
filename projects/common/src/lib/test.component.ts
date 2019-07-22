@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-test-lib',
+  selector: 'lib-test',
   template: `
     <p>
-      test-lib works!
+      test works!
     </p>
   `,
-  styles: [],
+  styles: []
 })
-export class TestLibComponent implements OnInit {
+export class TestComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}

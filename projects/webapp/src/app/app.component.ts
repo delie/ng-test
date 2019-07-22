@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { TestLibService } from '@ng-test/test-lib';
 import { TranslateService } from '@ngx-translate/core';
+import { TestService } from '@ng-test/common';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
-  constructor(private ts: TestLibService, private translate: TranslateService) {
+  constructor(private ts: TestService, private translate: TranslateService) {
     ts.test();
   }
 

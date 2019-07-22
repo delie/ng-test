@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "../../",
+    "outDir": "./out-tsc/spec",
+    "module": "commonjs",
+    "allowJs": true
+  },
+  "files": ["src/polyfills.ts"]
+}

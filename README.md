@@ -1,20 +1,21 @@
 # ng-test
 
 Sandbox project to experiment with:
+
 - Angular 8.1
 - Angular Libraries
-- NgRx 
+- NgRx
 - ngx-translate
-- Jest 
+- Jest
 - Shallow-render
 - Cypress
 - SCSS
 - Material
-- Angular Flex Layout  
+- Angular Flex Layout
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4300/`.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
 ## Code scaffolding
 
