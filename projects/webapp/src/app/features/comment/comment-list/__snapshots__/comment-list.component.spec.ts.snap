@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommentListComponent should create the component 1`] = `
+<app-comment-list>
+  <app-standard-page>
+    <h1>
+      
+    </h1>
+    <p>
+       This is just a little sandbox/test project I made to experiment with: 
+    </p>
+  </app-standard-page>
+</app-comment-list>
+`;

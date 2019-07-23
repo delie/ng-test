@@ -1,12 +1,12 @@
 import { async } from '@angular/core/testing';
 import { Shallow } from 'shallow-render';
-import { CommentListComponent } from './comment-list.component';
-import { CommentListModule } from './comment-list.module';
+import { HeaderComponent } from './header.component';
+import { HeaderModule } from './header.module';
 
-describe('CommentListComponent', () => {
-  let shallow: Shallow<CommentListComponent>;
+describe('HeaderComponent', () => {
+  let shallow: Shallow<HeaderComponent>;
   beforeEach(async(() => {
-    shallow = new Shallow(CommentListComponent, CommentListModule);
+    shallow = new Shallow(HeaderComponent, HeaderModule);
   }));
 
   it('should create the component', async () => {

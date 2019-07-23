@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Route, RouterModule } from '@angular/router';
 import { CommentListComponent } from './comment-list/comment-list.component';
-import { LayoutModule } from '../../layout/layout.module';
 import { SharedModule } from '../../shared/shared.module';
+import { LayoutModule } from '../../shared/components/layout/layout.module';
+import { CommentListModule } from './comment-list/comment-list.module';
 
 const routes: Route[] = [
   {
@@ -13,8 +14,8 @@ const routes: Route[] = [
 ];
 
 @NgModule({
-  declarations: [CommentListComponent],
-  imports: [CommonModule, RouterModule.forChild(routes), LayoutModule, SharedModule],
-  exports: [CommentListComponent]
+  declarations: [],
+  imports: [CommonModule, RouterModule.forChild(routes), LayoutModule, SharedModule, CommentListModule],
+  exports: []
 })
 export class CommentModule {}

@@ -8,9 +8,9 @@ import { AppComponent } from './app.component';
 import { metaReducers, reducers } from './state/app.reducer';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { LayoutModule } from './layout/layout.module';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.routes';
+import { LayoutModule } from './shared/components/layout/layout.module';
 
 @NgModule({
   declarations: [AppComponent],

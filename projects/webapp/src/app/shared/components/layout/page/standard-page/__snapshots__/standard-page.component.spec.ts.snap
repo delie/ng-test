@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StandardPageComponent should create the component 1`] = `
+<app-standard-page>
+  <app-header />
+  <div
+    class="page-content"
+  />
+  <app-footer />
+</app-standard-page>
+`;

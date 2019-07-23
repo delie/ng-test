@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderComponent should create the component 1`] = `
+<app-header>
+  <div
+    class="main-header"
+  >
+     @ng-test/webapp
+
+  </div>
+  <div
+    class="sub-header"
+  >
+    <a
+      ng-reflect-router-link="/"
+    >
+      
+    </a>
+     | 
+    <a
+      ng-reflect-router-link="/comments"
+    >
+      
+    </a>
+  </div>
+</app-header>
+`;

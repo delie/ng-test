@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FooterComponent should create the component 1`] = `
+<app-footer>
+  Language: 
+  <a>
+    EN
+  </a>
+   | 
+  <a>
+    FR
+  </a>
+</app-footer>
+`;

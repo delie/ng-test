@@ -5,10 +5,12 @@ import { FooterComponent } from './footer/footer.component';
 import { StandardPageComponent } from './page/standard-page/standard-page.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
+import { FooterModule } from './footer/footer.module';
+import { HeaderModule } from './header/header.module';
+import { StandardPageModule } from './page/standard-page/standard-page.module';
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, StandardPageComponent],
-  imports: [CommonModule, TranslateModule, RouterModule],
-  exports: [HeaderComponent, FooterComponent, StandardPageComponent]
+  imports: [CommonModule, TranslateModule, RouterModule, FooterModule, HeaderModule, StandardPageModule],
+  exports: [FooterModule, HeaderModule, StandardPageModule]
 })
 export class LayoutModule {}
