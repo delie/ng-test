@@ -3,15 +3,15 @@
 Sandbox project to experiment with:
 
 - Angular 8.1
-- Angular Libraries
+- Angular library projects
+- Angular Material
+- Angular Flex Layout
 - NgRx
 - ngx-translate
 - Jest
 - Shallow-render
 - Cypress
 - SCSS
-- Material
-- Angular Flex Layout
 
 ## Development server
 
